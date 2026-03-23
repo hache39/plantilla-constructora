@@ -1,0 +1,174 @@
+// ─── Cards de servicios ───
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+.service-card {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-gray-light);
+  background: var(--color-white);
+  transition: border-color $transition-base, transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+
+    .service-card__icon svg {
+      color: var(--color-gold);
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--spacing-sm);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      color: var(--color-gray-dark);
+      transition: color $transition-base;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__desc {
+    font-size: var(--text-sm);
+    color: var(--color-gray-mid);
+    line-height: 1.7;
+  }
+}
+
+// ─── Cards de proyectos ───
+.proyecto-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__img-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+
+    img {
+      @extend %img-cover;
+      transition: transform 0.8s $transition-slow;
+    }
+  }
+
+  &:hover {
+    .proyecto-card__img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .proyecto-card__overlay {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--spacing-md);
+    opacity: 0.85;
+    transition: opacity $transition-base;
+  }
+
+  &__type {
+    color: var(--color-gold);
+    margin-bottom: 0.4rem;
+  }
+
+  &__name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 1.2;
+  }
+
+  &__detail {
+    font-size: var(--text-sm);
+    color: rgba(255,255,255,0.65);
+    margin-top: 0.3rem;
+  }
+
+  // Variante grande (2 columnas)
+  &--large {
+    .proyecto-card__img-wrap {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+// ─── Cards de testimonios ───
+.testimonio-card {
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  &__stars {
+    color: var(--color-gold);
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+  }
+
+  &__quote {
+    font-family: var(--font-display);
+    font-size: var(--text-md);
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--color-gray-dark);
+    flex: 1;
+
+    &::before { content: '\201C'; }
+    &::after  { content: '\201D'; }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-gray-light);
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    strong {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--color-black);
+    }
+
+    span {
+      font-size: var(--text-xs);
+      color: var(--color-gray-mid);
+      letter-spacing: 0.04em;
+    }
+  }
+}

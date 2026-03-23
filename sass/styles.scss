@@ -1,0 +1,34 @@
+// ─── Entry point de estilos ───
+// Orden: abstracts → base → components → layout → pages → themes → vendors
+
+@use 'sass:math';
+
+// ─── Abstracts ───
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/placeholders' as *;
+
+// ─── Base ───
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+
+// ─── Components ───
+@use 'components/cursor';
+@use 'components/loader';
+@use 'components/navbar';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+
+// ─── Layout ───
+@use 'layout/hero';
+@use 'layout/sections';
+@use 'layout/footer';
+
+// ─── Themes ───
+@use 'themes/default';
+
+// ─── Vendors ───
+@use 'vendors/vendors';

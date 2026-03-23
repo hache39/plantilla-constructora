@@ -1,0 +1,68 @@
+// ─── Botones ───
+@use '../abstracts/variables' as *;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: background $transition-base, color $transition-base, border-color $transition-base, transform $transition-fast;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // ─── Variantes ───
+  &--primary {
+    background: var(--color-gold);
+    color: var(--color-black);
+
+    &:hover {
+      background: var(--color-gold-dark);
+      color: var(--color-white);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--color-white);
+    border-color: rgba(255,255,255,0.4);
+
+    &:hover {
+      border-color: var(--color-white);
+      background: rgba(255,255,255,0.08);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--color-black);
+    border-color: var(--color-black);
+
+    &:hover {
+      background: var(--color-black);
+      color: var(--color-white);
+    }
+  }
+
+  &--large {
+    padding: 1.125rem 2.5rem;
+    font-size: var(--text-base);
+  }
+
+  &--full {
+    width: 100%;
+    justify-content: center;
+  }
+}

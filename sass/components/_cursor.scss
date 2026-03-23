@@ -1,0 +1,40 @@
+// ─── Cursor custom ───
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+#cursorDot,
+#cursorRing {
+  position: fixed;
+  pointer-events: none;
+  z-index: $z-cursor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+
+  @include breakpoint(mobileandrotate) {
+    display: none;
+  }
+}
+
+#cursorDot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+}
+
+#cursorRing {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(184, 147, 90, 0.5);
+  transition: width 0.3s $transition-slow,
+              height 0.3s $transition-slow,
+              border-color 0.3s ease;
+}
+
+// Estado hover sobre enlaces y botones
+body.cursor-hover {
+  #cursorRing {
+    width: 54px;
+    height: 54px;
+    border-color: var(--color-gold);
+  }
+}

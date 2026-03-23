@@ -1,0 +1,14 @@
+{
+  "name": "plantilla-constructora",
+  "version": "1.0.0",
+  "description": "Plantilla web para empresas constructoras — Hache Studio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "vite": "^5.1.0"
+  }
+}

@@ -1,0 +1,134 @@
+// ─── Hero ───
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__img {
+    @extend %img-cover;
+    will-change: transform;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(10, 10, 10, 0.72) 0%,
+      rgba(10, 10, 10, 0.35) 100%
+    );
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-max);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+
+    @include breakpoint(mobile) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__eyebrow {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+    color: var(--color-gold-light);
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 400;
+    color: var(--color-white);
+    line-height: 1.05;
+    margin: 0.6rem 0 1.5rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease 0.35s, transform 0.7s $transition-slow 0.35s;
+
+    em {
+      color: var(--color-gold-light);
+      font-style: italic;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease 0.65s, transform 0.6s ease 0.65s;
+  }
+
+  // Estado activo tras loader
+  &.is-ready {
+    .hero__eyebrow,
+    .hero__title,
+    .hero__subtitle,
+    .hero__actions {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Indicador de scroll
+  &__scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: var(--spacing-md);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.6s ease 1.1s;
+
+    span {
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      writing-mode: vertical-rl;
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 48px;
+      background: var(--color-gold);
+      transform-origin: top;
+      animation: scrollLine 2s ease-in-out infinite 1.5s;
+    }
+  }
+
+  &.is-ready .hero__scroll-hint {
+    opacity: 1;
+  }
+}

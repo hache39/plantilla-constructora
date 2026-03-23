@@ -1,0 +1,72 @@
+// ─── Formulario ───
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    letter-spacing: 0.02em;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-gray-light);
+    background: var(--color-white);
+    font-size: var(--text-base);
+    color: var(--color-black);
+    border-radius: 2px;
+    outline: none;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: var(--color-fog);
+    }
+
+    &:focus {
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(184, 147, 90, 0.12);
+    }
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238B8B8B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+
+  @include breakpoint(mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-legal {
+  font-size: var(--text-xs);
+  color: var(--color-gray-mid);
+  line-height: 1.6;
+
+  a {
+    color: var(--color-gold);
+    text-decoration: underline;
+  }
+}
