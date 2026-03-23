@@ -1,8 +1,9 @@
 // ─── Navbar ───
 export function initNavbar() {
-  const nav  = document.getElementById('navbar');
-  const btn  = document.getElementById('hamburger');
-  const menu = nav?.querySelector('.navbar__links');
+  const nav         = document.getElementById('navbar');
+  const btn         = document.getElementById('hamburger');
+  const mobileMenu  = document.getElementById('mobileMenu');
+  const closeBtn    = document.getElementById('mobileMenuClose');
   if (!nav) return;
 
   // Clase scrolled al hacer scroll
@@ -11,21 +12,47 @@ export function initNavbar() {
   }, { passive: true });
 
   // Hamburger mobile
-  if (!btn || !menu) return;
+  if (!btn || !mobileMenu) return;
+
+  let scrollY = 0;
+
+  function lockScroll() {
+    scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top      = `-${scrollY}px`;
+    document.body.style.width    = '100%';
+  }
+
+  function unlockScroll() {
+    document.body.style.position = '';
+    document.body.style.top      = '';
+    document.body.style.width    = '';
+    window.scrollTo(0, scrollY);
+  }
+
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+    lockScroll();
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+    unlockScroll();
+  }
 
   btn.addEventListener('click', () => {
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!isOpen));
-    menu.classList.toggle('open', !isOpen);
-    document.body.style.overflow = isOpen ? '' : 'hidden';
+    btn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
   });
 
+  // Cerrar con el botón X
+  if (closeBtn) closeBtn.addEventListener('click', () => closeMenu());
+
   // Cerrar al hacer clic en un enlace
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      btn.setAttribute('aria-expanded', 'false');
-      menu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeMenu());
   });
 }

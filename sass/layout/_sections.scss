@@ -79,6 +79,10 @@
   padding: var(--spacing-xl) 0;
   background: var(--color-white);
 
+  @include breakpoint(mobileandrotate) {
+    padding: var(--spacing-lg) 0;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -99,6 +103,10 @@
 .proyectos {
   padding: var(--spacing-xl) 0;
   background: var(--color-black);
+
+  @include breakpoint(mobileandrotate) {
+    padding: var(--spacing-lg) 0;
+  }
 
   .section-header {
     .eyebrow { color: var(--color-gold); }
@@ -157,6 +165,10 @@
   padding: var(--spacing-xl) 0;
   background: var(--color-white);
 
+  @include breakpoint(mobileandrotate) {
+    padding: var(--spacing-lg) 0;
+  }
+
   &__layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -171,10 +183,10 @@
   &__media {
     position: relative;
     aspect-ratio: 4 / 5;
-    overflow: hidden;
 
     img {
       @extend %img-cover;
+      overflow: hidden;
     }
 
     @include breakpoint(tabletmobile) {
@@ -194,6 +206,12 @@
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+    z-index: 2;
+
+    @include breakpoint(tabletmobile) {
+      bottom: 1rem;
+      right: 1rem;
+    }
 
     @include breakpoint(mobileandrotate) {
       width: 90px;
@@ -262,6 +280,10 @@
   padding: var(--spacing-xl) 0;
   background: var(--color-black);
 
+  @include breakpoint(mobileandrotate) {
+    padding: var(--spacing-lg) 0;
+  }
+
   .section-header {
     .eyebrow { color: var(--color-gold); }
     .section-title { color: var(--color-white); }
@@ -328,6 +350,10 @@
   padding: var(--spacing-xl) 0;
   background: var(--color-gray-light);
 
+  @include breakpoint(mobileandrotate) {
+    padding: var(--spacing-lg) 0;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -391,6 +417,10 @@
 .contacto {
   padding: var(--spacing-xl) 0;
   background: var(--color-white);
+
+  @include breakpoint(mobileandrotate) {
+    padding: var(--spacing-lg) 0;
+  }
 
   &__layout {
     display: grid;

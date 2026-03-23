@@ -45,6 +45,20 @@
     </button>
   </nav>
 
+  <!-- Menú mobile — fuera del nav para evitar conflictos de stacking context -->
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Cerrar menú">
+      <span></span><span></span>
+    </button>
+    <ul class="mobile-menu__links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#contacto">Presupuesto</a></li>
+    </ul>
+  </div>
+
   <main>
 
     <!-- ─── Hero ─── -->
