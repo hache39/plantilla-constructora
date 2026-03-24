@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Constructora Élite — Obra nueva, reformas y rehabilitación con más de 15 años de experiencia. Solicita tu presupuesto sin compromiso."
+    />
+    <title>Constructora Élite — Construimos con precisión</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" crossorigin src="/plantilla-constructora/assets/main-DBEJcExv.js"></script>
+    <link rel="stylesheet" crossorigin href="/plantilla-constructora/assets/main-CiPCSfX-.css">
+  </head>
+  <body>
+    <!-- ─── Loader ─── -->
+    <div id="loader">
+      <div class="loader__inner">
+        <span class="loader__logo">ÉLITE</span>
+        <div class="loader__bar"><div class="loader__fill"></div></div>
+      </div>
+    </div>
+
+    <!-- ─── Cursor ─── -->
+    <div id="cursorDot"></div>
+    <div id="cursorRing"></div>
+
+    <!-- ─── Navbar ─── -->
+    <nav id="navbar" class="navbar">
+      <div class="navbar__brand">
+        <a href="#hero" class="logo-primary">ÉLITE</a>
+        <span class="logo-sub">Constructora</span>
+      </div>
+      <ul class="navbar__links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto" class="navbar__cta">Presupuesto</a></li>
+      </ul>
+      <button
+        class="navbar__hamburger"
+        id="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Menú mobile — fuera del nav para evitar conflictos de stacking context -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <button
+        class="mobile-menu__close"
+        id="mobileMenuClose"
+        aria-label="Cerrar menú"
+      >
+        <span></span><span></span>
+      </button>
+      <ul class="mobile-menu__links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Presupuesto</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- ─── Hero ─── -->
+      <section id="hero" class="hero">
+        <div class="hero__media">
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80"
+            alt="Edificio de obra nueva terminado"
+            class="hero__img"
+          />
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow">Más de 15 años construyendo</p>
+          <h1 class="hero__title">Construimos<br /><em>con precisión</em></h1>
+          <p class="hero__subtitle">
+            Obra nueva, reformas y rehabilitación. Cada proyecto es único, cada
+            detalle importa.
+          </p>
+          <div class="hero__actions">
+            <a href="#contacto" class="btn btn--primary"
+              >Solicitar presupuesto</a
+            >
+            <a href="#proyectos" class="btn btn--ghost">Ver proyectos</a>
+          </div>
+        </div>
+        <div class="hero__scroll-hint">
+          <span>Scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ─── Números ─── -->
+      <section class="stats">
+        <div class="container">
+          <div class="stats__grid">
+            <div class="stats__item reveal">
+              <span class="stats__number" data-count="200">0</span>
+              <span class="stats__plus">+</span>
+              <p class="stats__label">Proyectos completados</p>
+            </div>
+            <div class="stats__item reveal">
+              <span class="stats__number" data-count="15">0</span>
+              <span class="stats__plus">+</span>
+              <p class="stats__label">Años de experiencia</p>
+            </div>
+            <div class="stats__item reveal">
+              <span class="stats__number" data-count="98">0</span>
+              <span class="stats__plus">%</span>
+              <p class="stats__label">Clientes satisfechos</p>
+            </div>
+            <div class="stats__item reveal">
+              <span class="stats__number" data-count="40">0</span>
+              <span class="stats__plus">+</span>
+              <p class="stats__label">Profesionales en equipo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Servicios ─── -->
+      <section id="servicios" class="servicios">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">Qué hacemos</p>
+            <h2 class="section-title">Servicios <em>integrales</em></h2>
+            <p class="section-sub">
+              Desde el primer plano hasta la llave en mano. Cubrimos todas las
+              fases de tu proyecto.
+            </p>
+          </div>
+          <div class="servicios__grid">
+            <article class="service-card reveal">
+              <div class="service-card__icon">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 42V20L24 6L42 20V42H30V30H18V42H6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-card__title">Obra nueva</h3>
+              <p class="service-card__desc">
+                Construcción residencial y comercial desde cero. Gestionamos
+                proyecto, licencias y ejecución completa.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-card__icon">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="6"
+                    y="6"
+                    width="36"
+                    height="36"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M16 24H32M24 16V32"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-card__title">Reformas integrales</h3>
+              <p class="service-card__desc">
+                Transformamos viviendas y locales comerciales. Reforma total o
+                parcial con mínima interferencia en tu vida diaria.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-card__icon">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 40L8 20M20 40V28M32 40V32M40 40V16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 40H44"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-card__title">Rehabilitación</h3>
+              <p class="service-card__desc">
+                Recuperamos edificios con respeto por su historia. Refuerzo
+                estructural, fachadas, cubiertas y eficiencia energética.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-card__icon">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 36C12 30 16 26 24 26C32 26 36 30 36 36"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="24"
+                    cy="18"
+                    r="6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="6"
+                    y="6"
+                    width="36"
+                    height="36"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-card__title">Interiorismo</h3>
+              <p class="service-card__desc">
+                Diseño de interiores funcional y estético. Coordinamos
+                arquitectura, materiales y decoración en un único proyecto.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-card__icon">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12H42M6 24H42M6 36H42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-card__title">Gestión de proyectos</h3>
+              <p class="service-card__desc">
+                Coordinación integral con arquitectos, ingenieros y proveedores.
+                Un solo interlocutor para todo tu proyecto.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-card__icon">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 6L44 18V42H4V18L24 6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 42V30H32V42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-card__title">Obra civil</h3>
+              <p class="service-card__desc">
+                Urbanizaciones, pavimentaciones, movimientos de tierra y obra
+                pública. Maquinaria propia y equipo especializado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Proyectos / Portfolio ─── -->
+      <section id="proyectos" class="proyectos">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">Nuestro trabajo</p>
+            <h2 class="section-title">Proyectos <em>destacados</em></h2>
+          </div>
+
+          <!-- Filtros -->
+          <div class="proyectos__filtros reveal">
+            <button class="filtro-btn active" data-filter="all">Todos</button>
+            <button class="filtro-btn" data-filter="obra-nueva">
+              Obra nueva
+            </button>
+            <button class="filtro-btn" data-filter="reforma">Reformas</button>
+            <button class="filtro-btn" data-filter="rehabilitacion">
+              Rehabilitación
+            </button>
+          </div>
+
+          <div class="proyectos__grid">
+            <article class="proyecto-card reveal" data-category="obra-nueva">
+              <div class="proyecto-card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75"
+                  alt="Residencial Las Encinas"
+                  loading="lazy"
+                />
+                <div class="proyecto-card__overlay">
+                  <span class="proyecto-card__type eyebrow">Obra nueva</span>
+                  <h3 class="proyecto-card__name">Residencial Las Encinas</h3>
+                  <p class="proyecto-card__detail">
+                    24 viviendas · Madrid, 2024
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="proyecto-card reveal proyecto-card--large"
+              data-category="reforma"
+            >
+              <div class="proyecto-card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1000&q=75"
+                  alt="Reforma integral Piso Centro"
+                  loading="lazy"
+                />
+                <div class="proyecto-card__overlay">
+                  <span class="proyecto-card__type eyebrow"
+                    >Reforma integral</span
+                  >
+                  <h3 class="proyecto-card__name">Piso Centro Histórico</h3>
+                  <p class="proyecto-card__detail">180 m² · Barcelona, 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="proyecto-card reveal"
+              data-category="rehabilitacion"
+            >
+              <div class="proyecto-card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=75"
+                  alt="Rehabilitación Edificio Siglo XX"
+                  loading="lazy"
+                />
+                <div class="proyecto-card__overlay">
+                  <span class="proyecto-card__type eyebrow"
+                    >Rehabilitación</span
+                  >
+                  <h3 class="proyecto-card__name">Edificio Gran Vía</h3>
+                  <p class="proyecto-card__detail">
+                    12 plantas · Valencia, 2023
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="proyecto-card reveal" data-category="obra-nueva">
+              <div class="proyecto-card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=75"
+                  alt="Torre de oficinas"
+                  loading="lazy"
+                />
+                <div class="proyecto-card__overlay">
+                  <span class="proyecto-card__type eyebrow">Obra nueva</span>
+                  <h3 class="proyecto-card__name">Torre Empresarial Norte</h3>
+                  <p class="proyecto-card__detail">8 plantas · Sevilla, 2023</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="proyecto-card reveal proyecto-card--large"
+              data-category="reforma"
+            >
+              <div class="proyecto-card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1000&q=75"
+                  alt="Reforma local comercial"
+                  loading="lazy"
+                />
+                <div class="proyecto-card__overlay">
+                  <span class="proyecto-card__type eyebrow">Reforma</span>
+                  <h3 class="proyecto-card__name">Local Gastronómico Atocha</h3>
+                  <p class="proyecto-card__detail">320 m² · Madrid, 2023</p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="proyecto-card reveal"
+              data-category="rehabilitacion"
+            >
+              <div class="proyecto-card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=75"
+                  alt="Casa unifamiliar rehabilitada"
+                  loading="lazy"
+                />
+                <div class="proyecto-card__overlay">
+                  <span class="proyecto-card__type eyebrow"
+                    >Rehabilitación</span
+                  >
+                  <h3 class="proyecto-card__name">Casa Señorial El Escorial</h3>
+                  <p class="proyecto-card__detail">
+                    450 m² · El Escorial, 2022
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Sobre nosotros ─── -->
+      <section id="nosotros" class="nosotros">
+        <div class="container">
+          <div class="nosotros__layout">
+            <div class="nosotros__media reveal">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
+                alt="Equipo de constructora trabajando en obra"
+              />
+              <div class="nosotros__badge">
+                <span class="nosotros__badge-num">15+</span>
+                <span class="nosotros__badge-txt">años de experiencia</span>
+              </div>
+            </div>
+            <div class="nosotros__content">
+              <p class="eyebrow reveal">Quiénes somos</p>
+              <h2 class="section-title reveal">
+                Experiencia que <em>se ve</em>
+              </h2>
+              <p class="nosotros__text reveal">
+                Somos una constructora con más de 15 años en el sector.
+                Empezamos como empresa familiar y hoy contamos con un equipo de
+                más de 40 profesionales especializados en cada fase de la
+                construcción.
+              </p>
+              <p class="nosotros__text reveal">
+                Nuestra filosofía es simple: hacer lo que prometemos, en el
+                plazo acordado y con la calidad que cada cliente merece. Cada
+                obra lleva nuestro nombre.
+              </p>
+              <ul class="nosotros__valores reveal">
+                <li>
+                  <span class="nosotros__valor-icon">✓</span>
+                  <span>Presupuesto cerrado — sin sorpresas al final</span>
+                </li>
+                <li>
+                  <span class="nosotros__valor-icon">✓</span>
+                  <span
+                    >Materiales de primera con proveedores certificados</span
+                  >
+                </li>
+                <li>
+                  <span class="nosotros__valor-icon">✓</span>
+                  <span>Seguimiento semanal del estado de tu obra</span>
+                </li>
+                <li>
+                  <span class="nosotros__valor-icon">✓</span>
+                  <span>Garantía de 10 años en estructura</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Proceso ─── -->
+      <section id="proceso" class="proceso">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">Cómo trabajamos</p>
+            <h2 class="section-title">Tu proyecto en <em>4 pasos</em></h2>
+            <p class="section-sub">
+              Sin sorpresas, sin complicaciones. Sabemos que confiar en una
+              constructora es una decisión importante.
+            </p>
+          </div>
+          <div class="proceso__steps">
+            <div class="proceso__step reveal">
+              <div class="proceso__step-num">01</div>
+              <div class="proceso__step-content">
+                <h3>Primera visita gratuita</h3>
+                <p>
+                  Nos acercamos a conocer tu espacio y entender qué necesitas.
+                  Sin compromiso. Te escuchamos antes de hablar de números.
+                </p>
+              </div>
+            </div>
+
+            <div class="proceso__step reveal">
+              <div class="proceso__step-num">02</div>
+              <div class="proceso__step-content">
+                <h3>Presupuesto detallado</h3>
+                <p>
+                  En máximo 5 días laborables te enviamos un presupuesto
+                  desglosado. Materiales, mano de obra y plazos. Todo por
+                  escrito.
+                </p>
+              </div>
+            </div>
+
+            <div class="proceso__step reveal">
+              <div class="proceso__step-num">03</div>
+              <div class="proceso__step-content">
+                <h3>Ejecución con seguimiento</h3>
+                <p>
+                  Comenzamos la obra con un jefe de obra asignado. Recibes
+                  informes semanales con fotos del avance. Siempre puedes
+                  llamar.
+                </p>
+              </div>
+            </div>
+
+            <div class="proceso__step reveal">
+              <div class="proceso__step-num">04</div>
+              <div class="proceso__step-content">
+                <h3>Entrega y garantía</h3>
+                <p>
+                  Entregamos con documentación completa y garantía firmada. No
+                  cerramos el proyecto hasta que estés 100% satisfecho.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Testimonios ─── -->
+      <section id="testimonios" class="testimonios">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">Lo que dicen nuestros clientes</p>
+            <h2 class="section-title">Resultados que <em>hablan</em></h2>
+          </div>
+          <div class="testimonios__grid">
+            <article class="testimonio-card reveal">
+              <div class="testimonio-card__stars">★★★★★</div>
+              <blockquote class="testimonio-card__quote">
+                "Hicieron la reforma integral de nuestro piso en tiempo récord y
+                por debajo del presupuesto inicial. La comunicación durante toda
+                la obra fue excelente. 100% recomendables."
+              </blockquote>
+              <div class="testimonio-card__author">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                  alt="Carlos M."
+                />
+                <div>
+                  <strong>Carlos M.</strong>
+                  <span>Reforma integral — Madrid</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonio-card reveal">
+              <div class="testimonio-card__stars">★★★★★</div>
+              <blockquote class="testimonio-card__quote">
+                "Llevamos dos proyectos con ellos. El primero fue una
+                rehabilitación de fachada y el segundo obra nueva de local
+                comercial. En los dos casos, profesionalidad total y resultado
+                impecable."
+              </blockquote>
+              <div class="testimonio-card__author">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80"
+                  alt="Ana R."
+                />
+                <div>
+                  <strong>Ana R.</strong>
+                  <span>Local comercial — Barcelona</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonio-card reveal">
+              <div class="testimonio-card__stars">★★★★★</div>
+              <blockquote class="testimonio-card__quote">
+                "Lo que más valoro es que cumplieron los plazos. En construcción
+                eso es rarísimo. Además el acabado de la cocina y baños quedó
+                espectacular. Ya les hemos recomendado a tres conocidos."
+              </blockquote>
+              <div class="testimonio-card__author">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+                  alt="Pedro L."
+                />
+                <div>
+                  <strong>Pedro L.</strong>
+                  <span>Reforma de vivienda — Sevilla</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CTA Banner ─── -->
+      <section class="cta-banner">
+        <div class="cta-banner__media">
+          <img
+            src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=1800&q=75"
+            alt="Obras en construcción"
+            loading="lazy"
+          />
+          <div class="cta-banner__overlay"></div>
+        </div>
+        <div class="cta-banner__content reveal">
+          <p class="eyebrow">¿Tienes un proyecto en mente?</p>
+          <h2>Hablemos sin compromiso</h2>
+          <p>
+            Primera visita y presupuesto gratuitos. Respondemos en menos de 24
+            horas.
+          </p>
+          <a href="#contacto" class="btn btn--primary btn--large"
+            >Solicitar presupuesto gratis</a
+          >
+        </div>
+      </section>
+
+      <!-- ─── Contacto ─── -->
+      <section id="contacto" class="contacto">
+        <div class="container">
+          <div class="contacto__layout">
+            <div class="contacto__info">
+              <p class="eyebrow reveal">Contacto</p>
+              <h2 class="section-title reveal">
+                Cuéntanos tu <em>proyecto</em>
+              </h2>
+              <p class="contacto__sub reveal">
+                Te respondemos en menos de 24 horas. Si prefieres hablar
+                directamente, llámanos.
+              </p>
+
+              <div class="contacto__datos reveal">
+                <a href="tel:+34910000000" class="contacto__dato">
+                  <div class="contacto__dato-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.61 21 3 14.39 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contacto__dato-label">Teléfono</span>
+                    <span class="contacto__dato-value">+34 910 000 000</span>
+                  </div>
+                </a>
+                <a
+                  href="mailto:info@constructoraelite.es"
+                  class="contacto__dato"
+                >
+                  <div class="contacto__dato-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <polyline
+                        points="22,6 12,13 2,6"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contacto__dato-label">Email</span>
+                    <span class="contacto__dato-value"
+                      >info@constructoraelite.es</span
+                    >
+                  </div>
+                </a>
+                <div class="contacto__dato">
+                  <div class="contacto__dato-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle
+                        cx="12"
+                        cy="10"
+                        r="3"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contacto__dato-label">Oficina</span>
+                    <span class="contacto__dato-value"
+                      >Calle Mayor 24, Madrid</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <form class="contacto__form reveal" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="María García"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+34 600 000 000"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="maria@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="tipo">Tipo de obra *</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="" disabled selected>
+                    Selecciona una opción
+                  </option>
+                  <option value="obra-nueva">Obra nueva</option>
+                  <option value="reforma-integral">Reforma integral</option>
+                  <option value="reforma-parcial">Reforma parcial</option>
+                  <option value="rehabilitacion">Rehabilitación</option>
+                  <option value="interiorismo">Interiorismo</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="metros">Metros aproximados</label>
+                  <input
+                    type="text"
+                    id="metros"
+                    name="metros"
+                    placeholder="Ej: 120 m²"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="localidad">Localidad *</label>
+                  <input
+                    type="text"
+                    id="localidad"
+                    name="localidad"
+                    placeholder="Madrid"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Cuéntanos más sobre tu proyecto</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Describe brevemente qué quieres hacer, estado actual, plazo aproximado..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                Enviar solicitud de presupuesto
+              </button>
+              <p class="form-legal">
+                Al enviar este formulario aceptas nuestra
+                <a href="#">política de privacidad</a>. Nunca compartimos tus
+                datos.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <span class="logo-primary">ÉLITE</span>
+            <span class="logo-sub">Constructora</span>
+            <p class="footer__tagline">Construimos con precisión desde 2009.</p>
+          </div>
+          <div class="footer__nav">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="#servicios">Obra nueva</a></li>
+              <li><a href="#servicios">Reformas integrales</a></li>
+              <li><a href="#servicios">Rehabilitación</a></li>
+              <li><a href="#servicios">Interiorismo</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <h4>Empresa</h4>
+            <ul>
+              <li><a href="#nosotros">Sobre nosotros</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+              <li><a href="#proceso">Cómo trabajamos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <h4>Contacto directo</h4>
+            <a href="tel:+34910000000" class="footer__phone">+34 910 000 000</a>
+            <p>Lun – Vie: 8:00 – 19:00</p>
+            <p>Sáb: 9:00 – 14:00</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 Constructora Élite. Todos los derechos reservados.</p>
+          <p>
+            Diseño web por
+            <a href="https://hachestudio.dev" target="_blank" rel="noopener"
+              >Hache Studio</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Teléfono flotante mobile -->
+    <a href="tel:+34910000000" class="tel-flotante" aria-label="Llamar ahora">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.61 21 3 14.39 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
+
+  </body>
+</html>
